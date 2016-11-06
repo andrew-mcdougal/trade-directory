@@ -1,2 +1,2 @@
 # trade-directory
-TYrade directory website
+Trade directory website
