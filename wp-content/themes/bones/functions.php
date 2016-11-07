@@ -99,10 +99,10 @@ you like. Enjoy!
 add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 
 function bones_custom_image_sizes( $sizes ) {
-    return array_merge( $sizes, array(
-        'bones-thumb-600' => __('600px by 150px'),
-        'bones-thumb-300' => __('300px by 100px'),
-    ) );
+	return array_merge( $sizes, array(
+		'bones-thumb-600' => __('600px by 150px'),
+		'bones-thumb-300' => __('300px by 100px'),
+	) );
 }
 
 /*
@@ -197,35 +197,35 @@ function bones_register_sidebars() {
 function bones_comments( $comment, $args, $depth ) {
    $GLOBALS['comment'] = $comment; ?>
   <div id="comment-<?php comment_ID(); ?>" <?php comment_class('cf'); ?>>
-    <article  class="cf">
-      <header class="comment-author vcard">
-        <?php
-        /*
-          this is the new responsive optimized comment image. It used the new HTML5 data-attribute to display comment gravatars on larger screens only. What this means is that on larger posts, mobile sites don't have a ton of requests for comment images. This makes load time incredibly fast! If you'd like to change it back, just replace it with the regular wordpress gravatar call:
-          echo get_avatar($comment,$size='32',$default='<path_to_url>' );
-        */
-        ?>
-        <?php // custom gravatar call ?>
-        <?php
-          // create variable
-          $bgauthemail = get_comment_author_email();
-        ?>
-        <img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=40" class="load-gravatar avatar avatar-48 photo" height="40" width="40" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
-        <?php // end custom gravatar call ?>
-        <?php printf(__( '<cite class="fn">%1$s</cite> %2$s', 'bonestheme' ), get_comment_author_link(), edit_comment_link(__( '(Edit)', 'bonestheme' ),'  ','') ) ?>
-        <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'bonestheme' )); ?> </a></time>
+	<article  class="cf">
+	  <header class="comment-author vcard">
+		<?php
+		/*
+		  this is the new responsive optimized comment image. It used the new HTML5 data-attribute to display comment gravatars on larger screens only. What this means is that on larger posts, mobile sites don't have a ton of requests for comment images. This makes load time incredibly fast! If you'd like to change it back, just replace it with the regular wordpress gravatar call:
+		  echo get_avatar($comment,$size='32',$default='<path_to_url>' );
+		*/
+		?>
+		<?php // custom gravatar call ?>
+		<?php
+		  // create variable
+		  $bgauthemail = get_comment_author_email();
+		?>
+		<img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=40" class="load-gravatar avatar avatar-48 photo" height="40" width="40" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
+		<?php // end custom gravatar call ?>
+		<?php printf(__( '<cite class="fn">%1$s</cite> %2$s', 'bonestheme' ), get_comment_author_link(), edit_comment_link(__( '(Edit)', 'bonestheme' ),'  ','') ) ?>
+		<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'bonestheme' )); ?> </a></time>
 
-      </header>
-      <?php if ($comment->comment_approved == '0') : ?>
-        <div class="alert alert-info">
-          <p><?php _e( 'Your comment is awaiting moderation.', 'bonestheme' ) ?></p>
-        </div>
-      <?php endif; ?>
-      <section class="comment_content cf">
-        <?php comment_text() ?>
-      </section>
-      <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-    </article>
+	  </header>
+	  <?php if ($comment->comment_approved == '0') : ?>
+		<div class="alert alert-info">
+		  <p><?php _e( 'Your comment is awaiting moderation.', 'bonestheme' ) ?></p>
+		</div>
+	  <?php endif; ?>
+	  <section class="comment_content cf">
+		<?php comment_text() ?>
+	  </section>
+	  <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+	</article>
   <?php // </li> is added by WordPress automatically ?>
 <?php
 } // don't remove this bracket!
@@ -239,7 +239,7 @@ can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
 function bones_fonts() {
-  wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
+  wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
 }
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
@@ -247,11 +247,6 @@ add_action('wp_enqueue_scripts', 'bones_fonts');
 
 
 
-// Add excerpt option in pages
-add_action( 'init', 'my_add_excerpts_to_pages' );
-function my_add_excerpts_to_pages() {
-     add_post_type_support( 'page', 'excerpt' );
-}
 
 
 
@@ -262,43 +257,99 @@ function my_add_excerpts_to_pages() {
 
 
 
-function wpb_list_child_pages() { 
-
-global $post; 
-
-if ( is_page() && $post->post_parent )
-
-  $childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->post_parent . '&echo=0' );
-else
-  $childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0' );
-
-if ( $childpages ) {
-
-  $string = '<ul>' . $childpages . '</ul>';
-}
-
-return $string;
-
-}
-
-add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Custom shit
 /**
  * Proper way to enqueue scripts and styles
  */
-function load_custom_script() {
-  wp_enqueue_script( 'video-script', get_stylesheet_directory_uri() . '/library/js/player.min.js', array(), '1.0.0', true );
-  wp_enqueue_script( 'superslides-script', get_stylesheet_directory_uri() . '/library/js/jquery.superslides.js', array(), '1.0.0', true );
-  wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/library/js/custom.js', array(), '1.0.0', true );
+function ontrend_add_styles_and_scripts() {
+	// Sample load from cloud CSS
+	wp_enqueue_style( 'prefix-font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', array(), '4.6.3' );
 
-  wp_enqueue_style( 'superslides-style', get_stylesheet_directory_uri() . '/library/css/superslides.css', array(), '1.0.0', true );
+	//
+	// JS
+	//
+
+	// jQuery
+	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js', array(), '' );
+
+	// GSAP Animation & Timelines
+	wp_enqueue_script( 'gsap-script', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js', array(), '' );
+
+	// Responsive classes
+	//wp_enqueue_script( 'responsive-classes-script', get_template_directory_uri() . '/library/js/jquery.responsive-classes.js', array(), '' );
+
+	// Slick slider
+	wp_enqueue_script( 'slick-script', get_template_directory_uri() . '/library/js/slick.min.js', array(), '' );
+
+	// Match height
+	wp_enqueue_script( 'height-script', get_template_directory_uri() . '/library/js/matchHeight.js', array(), '' );  
+
+	// onTrend custom js
+	wp_enqueue_script( 'ontrend-script', get_template_directory_uri() . '/library/js/ontrend.js', array(), '' );
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	//
+	// CSS
+	//
+	// Fontawesome
+	wp_enqueue_style( 'prefix-font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', array(), '4.0.3' );
+
+	// Slick slider css
+	wp_enqueue_style( 'slick-style', get_stylesheet_directory_uri() . '/library/css/slick.css', array(), '' );
+	wp_enqueue_style( 'slick-theme-style', get_stylesheet_directory_uri() . '/library/css/slick-theme.css', array(), '' );
+
+	// onTrrend custom css
+	wp_enqueue_style( 'ontrend-style', get_stylesheet_directory_uri() . '/library/css/ontrend.css', array(), '' );
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 }
 
-add_action( 'wp_enqueue_scripts', 'load_custom_script' );
+add_action( 'wp_enqueue_scripts', 'ontrend_add_styles_and_scripts' );
+
+
 
 
 

@@ -1,0 +1,36 @@
+html,
+#trade {
+	font-family: arial;
+	font-size: 12px;
+
+	.header {
+		text-align: center;
+		background: #FFF;
+		color: blue;
+
+		#logo a {
+			color: blue;
+			font-weight: bold;
+			border: 2px solid blue;
+			border-left: none;
+			border-right: none;
+			padding: 0.25em 0;
+		}
+	}
+
+	a, a:hover, a:focus, a:visited:hover, a:visited:focus {
+		color: blue;
+	}
+}
+
+
+
+/* top carousel thing */
+.business-pod {
+	width: 110px;
+	height: 80px;
+	border: 1px solid #ccc;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

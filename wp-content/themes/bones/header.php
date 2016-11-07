@@ -40,41 +40,7 @@
 
 	</head>
 
-	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
-
-<?php if( have_rows('slide') ): ?>
-
-	<div class="bg-slides">
-
-		<ul class="slides-container">
-
-	<?php while( have_rows('slide') ): the_row(); 
-
-		// vars
-		$image = get_sub_field('image');
-		$content = get_sub_field('text');
-
-		?>
-
-		<li class="slide">
-			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
-			<p><?php echo $content; ?></p>
-
-		</li>
-
-	<?php endwhile; ?>
-
-	</ul>
-
-	<nav class="slides-navigation">
-    <a href="#" class="next">Next</a>
-    <a href="#" class="prev">Previous</a>
-  </nav>
-
-
-</div>
-
-<?php endif; ?>
+	<body id="trade" <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
 		<div id="container">
 
@@ -105,6 +71,27 @@
 						)); ?>
 
 					</nav>
+
+					<div class="main-carousel">
+						<div class="business-pod">
+							<div>
+								<div class="image">Image coming soon</div>
+								<a href="javascript:void(0);">www.peter.com.au</a>
+							</div>
+						</div>
+						<div class="business-pod">
+							<div>
+								<div class="image">Image coming soon</div>
+								<a href="javascript:void(0);">www.peter.com.au</a>
+							</div>
+						</div>
+						<div class="business-pod">
+							<div>
+								<div class="image">Image coming soon</div>
+								<a href="javascript:void(0);">www.peter.com.au</a>
+							</div>
+						</div>
+					</div>
 
 				</div>
 

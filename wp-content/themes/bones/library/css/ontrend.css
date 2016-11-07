@@ -1,0 +1,35 @@
+html,
+#trade {
+  font-family: arial;
+  font-size: 12px; }
+  html .header,
+  #trade .header {
+    text-align: center;
+    background: #FFF;
+    color: blue; }
+    html .header #logo a,
+    #trade .header #logo a {
+      color: blue;
+      font-weight: bold;
+      border: 2px solid blue;
+      border-left: none;
+      border-right: none;
+      padding: 0.25em 0; }
+  html a, html a:hover, html a:focus, html a:visited:hover, html a:visited:focus,
+  #trade a,
+  #trade a:hover,
+  #trade a:focus,
+  #trade a:visited:hover,
+  #trade a:visited:focus {
+    color: blue; }
+
+/* top carousel thing */
+.business-pod {
+  width: 110px;
+  height: 80px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+/*# sourceMappingURL=ontrend.css.map */
