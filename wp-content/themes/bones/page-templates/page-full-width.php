@@ -51,64 +51,35 @@
 									?>
 
 <?php
-
-   $args = array('post-type' => 'post');
-   $category_posts = new WP_Query($args);
-
-   if($category_posts->have_posts()) : 
-      while($category_posts->have_posts()) : 
-         $category_posts->the_post();
-?>
-
-         <h1><?php the_title() ?></h1>
-         <div class='post-content'><?php the_content() ?></div>      
+    $args = array(
+      'post_type' => 'trade',
       
-<?php
-      endwhile;
-      wp_reset_postdata();
-   else: 
-?>
-
-      Oops, there are no posts.
-
-<?php
-   endif;
-?>
-
-<?php
-
-//***----------------Parent cat args---------------------***/
-$Parentcatargs = array(
-    'orderby' => 'name',
-    'order' => 'ASC',
-    'use_desc_for_title' => 1,
-    'hide_empty' => 0,
-    'parent' => 0
-);
-
-$category = get_categories($Parentcatargs);
-//print_r($category); //Return Array
-
-foreach ($category as $Parentcat) {
-
-    echo $Parentcat->name . "<br>";  //Get Parent Category Name
-
-    //***----------------child cat args---------------------***/    
-    $childargs = array(
-        'child_of' => $Parentcat->cat_ID,
-        'hide_empty' => 0,
-        'parent' => $Parentcat->cat_ID
     );
-
-
-    $childcategories = get_categories($childargs);
-    //print_r($childcategories); //Return Array
-
-    foreach ($childcategories as $childcat) {
-        echo $childcat->name . "<br>";  //Get child Category Name
+    $products = new WP_Query( $args );
+    if( $products->have_posts() ) {
+      while( $products->have_posts() ) {
+        $products->the_post();
+        ?>
+          <h1><?php the_title() ?></h1>
+          <div class='content'>
+            <?php the_content() ?>
+          </div>
+        <?php
+      }
     }
-}
+    else {
+      echo 'Oh ohm no products!';
+    }
+  ?>
+
+  <form  method="post" action="<?php bloginfo('url');?>/trade-search-results/">
+<?php  $taxonomies = get_object_taxonomies('trade');
+    foreach($taxonomies as $tax){
+        echo buildSelect($tax);
+    }
 ?>
+<input type="submit"/>
+</form>
 								</section>
 
 							</article>

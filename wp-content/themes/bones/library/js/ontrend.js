@@ -11,10 +11,24 @@
 			slidesToScroll: 1,
 			infinite: true,
 		});
+	
+
+		function changeMeta() {
+			$('meta[name=description]').attr('content', 'New Author Name');
+		}
+
+		changeMeta();
+
+
 	}); // end document ready
+
+
 
 	jQuery(window).load(function() {
 	//setTimeout(resetMap, 200);
 	});
+
+
+
 
 })( jQuery );

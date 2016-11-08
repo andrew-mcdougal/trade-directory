@@ -45,6 +45,7 @@ class acf_field {
 		$this->add_action("acf/render_field/type={$this->name}",			array($this, 'render_field'), 10, 1);
 		$this->add_action("acf/render_field_settings/type={$this->name}",	array($this, 'render_field_settings'), 10, 1);
 		$this->add_action("acf/prepare_field/type={$this->name}",			array($this, 'prepare_field'), 10, 1);
+		$this->add_action("acf/translate_field/type={$this->name}",			array($this, 'translate_field'), 10, 1);
 		
 		
 		// input actions
@@ -58,7 +59,7 @@ class acf_field {
 		// field group actions
 		$this->add_action("acf/field_group/admin_enqueue_scripts", 		array($this, 'field_group_admin_enqueue_scripts'), 10, 0);
 		$this->add_action("acf/field_group/admin_head",					array($this, 'field_group_admin_head'), 10, 0);
-		
+		$this->add_action("acf/field_group/admin_footer",				array($this, 'field_group_admin_footer'), 10, 0);
 	}
 	
 	
@@ -78,12 +79,43 @@ class acf_field {
 	*  @return	n/a
 	*/
 	
-	function add_filter($tag, $function_to_add, $priority = 10, $accepted_args = 1) {
+	function add_filter( $tag = '', $function_to_add = '', $priority = 10, $accepted_args = 1 ) {
 		
-		if( is_callable($function_to_add) )
-		{
-			add_filter($tag, $function_to_add, $priority, $accepted_args);
-		}
+		// bail early if no callable
+		if( !is_callable($function_to_add) ) return;
+		
+		
+		// add
+		add_filter( $tag, $function_to_add, $priority, $accepted_args );
+		
+	}
+	
+	
+	/*
+	*  add_field_filter
+	*
+	*  This function will add a field type specific filter
+	*
+	*  @type	function
+	*  @date	29/09/2016
+	*  @since	5.4.0
+	*
+	*  @param	$tag (string)
+	*  @param	$function_to_add (string)
+	*  @param	$priority (int)
+	*  @param	$accepted_args (int)
+	*  @return	n/a
+	*/
+	
+	function add_field_filter( $tag = '', $function_to_add = '', $priority = 10, $accepted_args = 1 ) {
+		
+		// append
+		$tag .= '/type=' . $this->name;
+		
+		
+		// add
+		$this->add_filter( $tag, $function_to_add, $priority, $accepted_args );
+		
 	}
 	
 	
@@ -103,12 +135,43 @@ class acf_field {
 	*  @return	n/a
 	*/
 	
-	function add_action($tag, $function_to_add, $priority = 10, $accepted_args = 1) {
+	function add_action( $tag = '', $function_to_add = '', $priority = 10, $accepted_args = 1 ) {
 		
-		if( is_callable($function_to_add) )
-		{
-			add_action($tag, $function_to_add, $priority, $accepted_args);
-		}
+		// bail early if no callable
+		if( !is_callable($function_to_add) ) return;
+		
+		
+		// add
+		add_action( $tag, $function_to_add, $priority, $accepted_args );
+		
+	}
+	
+	
+	/*
+	*  add_field_action
+	*
+	*  This function will add a field type specific filter
+	*
+	*  @type	function
+	*  @date	29/09/2016
+	*  @since	5.4.0
+	*
+	*  @param	$tag (string)
+	*  @param	$function_to_add (string)
+	*  @param	$priority (int)
+	*  @param	$accepted_args (int)
+	*  @return	n/a
+	*/
+	
+	function add_field_action( $tag = '', $function_to_add = '', $priority = 10, $accepted_args = 1 ) {
+		
+		// append
+		$tag .= '/type=' . $this->name;
+		
+		
+		// add
+		$this->add_action( $tag, $function_to_add, $priority, $accepted_args );
+		
 	}
 	
 	

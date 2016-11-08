@@ -351,12 +351,113 @@ add_action( 'wp_enqueue_scripts', 'ontrend_add_styles_and_scripts' );
 
 
 
+// Add custom post type TRADE
+function custom_post_type_trade() {
+  $labels = array(
+    'name'               => _x( 'Trades', 'post type general name' ),
+    'singular_name'      => _x( 'Trade', 'post type singular name' ),
+    'add_new'            => _x( 'Add New', 'book' ),
+    'add_new_item'       => __( 'Add New Trade' ),
+    'edit_item'          => __( 'Edit Trade' ),
+    'new_item'           => __( 'New Trade' ),
+    'all_items'          => __( 'All Trades' ),
+    'view_item'          => __( 'View Trade' ),
+    'search_items'       => __( 'Search Trades' ),
+    'not_found'          => __( 'No trades found' ),
+    'not_found_in_trash' => __( 'No trades found in the Trash' ), 
+    'parent_item_colon'  => '',
+    'menu_name'          => 'Trades'
+  );
+  $args = array(
+    'labels'        => $labels,
+    'description'   => 'Holds our trades and trade specific data',
+    'public'        => true,
+    'menu_position' => 5,
+    'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', ),
+    'has_archive'   => true,
+  );
+  register_post_type( 'trade', $args ); 
+}
+add_action( 'init', 'custom_post_type_trade' );
+
+function trade_taxonomy_trade() {
+  $labels = array(
+    'name'              => _x( 'Trade Categories', 'taxonomy general name' ),
+    'singular_name'     => _x( 'Trade Category', 'taxonomy singular name' ),
+    'search_items'      => __( 'Search Trade Categories' ),
+    'all_items'         => __( 'All Trade Categories' ),
+    'parent_item'       => __( 'Parent Trade Category' ),
+    'parent_item_colon' => __( 'Parent Trade Category:' ),
+    'edit_item'         => __( 'Edit Trade Category' ), 
+    'update_item'       => __( 'Update Trade Category' ),
+    'add_new_item'      => __( 'Add New Trade Category' ),
+    'new_item_name'     => __( 'New Trade Category' ),
+    'menu_name'         => __( 'Trade' ),
+  );
+  $args = array(
+    'labels' => $labels,
+    'hierarchical' => true,
+  );
+  register_taxonomy( 'trade_category', 'trade', $args );
+}
+add_action( 'init', 'trade_taxonomy_trade', 0 );
+
+function trade_taxonomy_state() {
+  $labels = array(
+    'name'              => _x( 'State Categories', 'taxonomy general name' ),
+    'singular_name'     => _x( 'State Category', 'taxonomy singular name' ),
+    'search_items'      => __( 'Search State Categories' ),
+    'all_items'         => __( 'All State Categories' ),
+    'parent_item'       => __( 'Parent State Category' ),
+    'parent_item_colon' => __( 'Parent State Category:' ),
+    'edit_item'         => __( 'Edit State Category' ), 
+    'update_item'       => __( 'Update State Category' ),
+    'add_new_item'      => __( 'Add New State Category' ),
+    'new_item_name'     => __( 'New State Category' ),
+    'menu_name'         => __( 'State' ),
+  );
+  $args = array(
+    'labels' => $labels,
+    'hierarchical' => true,
+  );
+  register_taxonomy( 'state_category', 'trade', $args );
+}
+add_action( 'init', 'trade_taxonomy_state', 0 );
+
+function trade_taxonomy_region() {
+  $labels = array(
+    'name'              => _x( 'Region Categories', 'taxonomy general name' ),
+    'singular_name'     => _x( 'Region Category', 'taxonomy singular name' ),
+    'search_items'      => __( 'Search Region Categories' ),
+    'all_items'         => __( 'All Region Categories' ),
+    'parent_item'       => __( 'Parent Region Category' ),
+    'parent_item_colon' => __( 'Parent Region Category:' ),
+    'edit_item'         => __( 'Edit Region Category' ), 
+    'update_item'       => __( 'Update Region Category' ),
+    'add_new_item'      => __( 'Add New Region Category' ),
+    'new_item_name'     => __( 'New Region Category' ),
+    'menu_name'         => __( 'Region' ),
+  );
+  $args = array(
+    'labels' => $labels,
+    'hierarchical' => true,
+  );
+  register_taxonomy( 'region_category', 'trade', $args );
+}
+add_action( 'init', 'trade_taxonomy_region', 0 );
 
 
-
-
-
-
+// Build the category form
+function buildSelect($tax){
+	$terms = get_terms($tax);
+	$x = '<select name="'. $tax .'">';
+	$x .= '<option value="">Select '. ucfirst($tax) .'</option>';
+	foreach ($terms as $term) {
+	   $x .= '<option value="' . $term->slug . '">' . $term->name . '</option>';
+	}
+	$x .= '</select>';
+	return $x;
+}
 
 
 
