@@ -1,0 +1,151 @@
+html,
+#trade {
+	font-family: arial;
+	font-size: 12px;
+
+	.header {
+		text-align: center;
+		background: #FFF;
+		color: blue;
+
+		#logo a {
+			color: blue;
+			font-weight: bold;
+			border: 2px solid blue;
+			border-left: none;
+			border-right: none;
+			padding: 0.25em 0;
+		}
+	}
+
+	a, a:hover, a:focus, a:visited:hover, a:visited:focus {
+		color: blue;
+	}
+}
+
+
+
+/* top carousel thing */
+.main-carousel {
+	margin: 3em 0;
+	border: 1px solid #ccc;
+
+	.business-pod {
+		width: 100%;
+		height: auto;
+		border: 1px solid #ccc;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img {
+			width: 100%;
+		}
+
+		a {
+			font-size: 16px;
+			display: block;
+			padding: 10px;
+		}
+	}
+}
+
+/* Search Bar */
+.search-container {
+	background: #000;
+	max-width: none;
+	width: 100%;
+	padding: 20px;
+	margin-bottom: 2em;
+
+	form {
+		margin: 0;
+
+		input,
+		select {
+			font-family: arial;
+			font-size: 16px;
+			border-radius: 0;
+			margin-bottom: 0;
+		}
+
+		input[type="submit"] {
+			background: rgba(255,255,255,0.8);
+			border: none;
+
+			&:hover {
+				background: rgba(255,255,255,1);
+			}
+		}
+	}
+
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Services container */
+.services-container {
+
+	.columns:nth-child(3n+4) {
+		margin-left: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

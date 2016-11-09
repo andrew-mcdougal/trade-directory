@@ -1,0 +1,69 @@
+html,
+#trade {
+  font-family: arial;
+  font-size: 12px; }
+  html .header,
+  #trade .header {
+    text-align: center;
+    background: #FFF;
+    color: blue; }
+    html .header #logo a,
+    #trade .header #logo a {
+      color: blue;
+      font-weight: bold;
+      border: 2px solid blue;
+      border-left: none;
+      border-right: none;
+      padding: 0.25em 0; }
+  html a, html a:hover, html a:focus, html a:visited:hover, html a:visited:focus,
+  #trade a,
+  #trade a:hover,
+  #trade a:focus,
+  #trade a:visited:hover,
+  #trade a:visited:focus {
+    color: blue; }
+
+/* top carousel thing */
+.main-carousel {
+  margin: 3em 0;
+  border: 1px solid #ccc; }
+  .main-carousel .business-pod {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .main-carousel .business-pod img {
+      width: 100%; }
+    .main-carousel .business-pod a {
+      font-size: 16px;
+      display: block;
+      padding: 10px; }
+
+/* Search Bar */
+.search-container {
+  background: #000;
+  max-width: none;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 2em; }
+  .search-container form {
+    margin: 0; }
+    .search-container form input,
+    .search-container form select {
+      font-family: arial;
+      font-size: 16px;
+      border-radius: 0;
+      margin-bottom: 0; }
+    .search-container form input[type="submit"] {
+      background: rgba(255, 255, 255, 0.8);
+      border: none; }
+      .search-container form input[type="submit"]:hover {
+        background: white; }
+
+/* Services container */
+.services-container .columns:nth-child(3n+4) {
+  margin-left: 0; }
+
+/*# sourceMappingURL=ontrend.css.map */
