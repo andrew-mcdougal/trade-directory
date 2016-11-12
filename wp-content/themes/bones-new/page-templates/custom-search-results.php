@@ -26,6 +26,19 @@
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 								<section class="entry-content cf" itemprop="articleBody">
+                                	<?php
+									$list = array();
+									$item = array();
+									foreach($_POST as $key => $value){
+										if($value != ''){
+											$item['taxonomy'] = htmlspecialchars($key);
+											$item['terms'] = htmlspecialchars($value);
+											$item['field'] = 'slug';
+											$list[] = $item;
+										}
+									}
+									$cleanArray = array_merge(array('relation' => 'AND'), $list);
+									?>
 									<?php 
 									$args['post_type'] = 'trade';
 									$args['showposts'] = 9;
@@ -36,10 +49,15 @@
 									?>
 
 
+<div class="container services-container">
 <?php echo ($the_query->found_posts > 0) ? '<h3 class="foundPosts">' . $the_query->found_posts. ' listings found</h3>' : '<h3 class="foundPosts">We found no results</h3>';?>
 	<?php while ( $the_query->have_posts() ) : $the_query->the_post();?>
-
-	<h1><?php the_title() ?></h1>
+	<div class="columns four">
+	<div class='content'>
+      	<?php echo the_post_thumbnail( 'full' ); ?>
+        <?php the_content() ?>
+      </div>
+	
 	<?php
 	$terms = get_the_terms($post->ID, 'trade_category' );
 if ($terms && ! is_wp_error($terms)) :
@@ -49,17 +67,24 @@ if ($terms && ! is_wp_error($terms)) :
 	}
 	$terms_slug_str = join( " ", $term_slugs_arr);
 endif;
-echo $terms_slug_str;
+//echo $terms_slug_str;
 
 ?>
 
+</div>
+
 
 	<?php endwhile; wp_reset_postdata();?>
+	</div>
 
 <div class="row page-navigation">
 	 <?php next_posts_link('&laquo; Older Entries', $the_query->max_num_pages) ?>
 	 <?php previous_posts_link('Newer Entries &raquo;') ?>
 </div>
+
+
+
+
 								</section>
 
 							</article>

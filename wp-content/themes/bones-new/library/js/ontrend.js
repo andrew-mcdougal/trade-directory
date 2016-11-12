@@ -20,6 +20,12 @@
 		changeMeta();
 
 
+
+		$('.search-container select option:contains("Select Trade_category")').text('Trades and Services');
+		$('.search-container select option:contains("Select State_category")').text('State');
+		$('.search-container select option:contains("Select Region_category")').text('Area/Region/Suburb');
+
+
 	}); // end document ready
 
 

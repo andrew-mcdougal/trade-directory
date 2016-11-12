@@ -1,0 +1,6 @@
+Nov 09 2016 21:16:58
+{"Number":8,"Message":"unserialize(): Error at offset 175 of 3037 bytes","File":"\/Applications\/MAMP\/htdocs\/trade-directory\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/database\/class-ai1wm-database-utility.php","Line":56}
+
+Nov 12 2016 01:49:24
+{"Number":8,"Message":"unserialize(): Error at offset 175 of 3037 bytes","File":"\/Applications\/MAMP\/htdocs\/trade-directory\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/database\/class-ai1wm-database-utility.php","Line":56}
+

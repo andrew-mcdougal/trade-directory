@@ -2,6 +2,7 @@ html,
 #trade {
 	font-family: arial;
 	font-size: 12px;
+	background: #FFF;
 
 	.header {
 		text-align: center;
@@ -16,6 +17,22 @@ html,
 			border-right: none;
 			padding: 0.25em 0;
 		}
+
+		.tagline {
+			font-size: 12px;
+			text-transform: uppercase;
+			margin: 0;
+		}
+
+		#menu-main {
+
+			li a {
+				color: #000;
+				text-transform: uppercase;
+				font-size: 18px;
+				font-weight: bold;
+			}
+		}
 	}
 
 	a, a:hover, a:focus, a:visited:hover, a:visited:focus {
@@ -27,7 +44,7 @@ html,
 
 /* top carousel thing */
 .main-carousel {
-	margin: 3em 0;
+	margin: 0 0 3em 0;
 	border: 1px solid #ccc;
 
 	.business-pod {
@@ -58,8 +75,47 @@ html,
 	padding: 20px;
 	margin-bottom: 2em;
 
+	h3 {
+		color: #FFF;
+		font-size: 2.5em;
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: 0.01em;
+	}
+
 	form {
-		margin: 0;
+		margin: 0 auto;
+		width: 80%;
+
+		.columns:first-child {
+			width: 35%;
+		}
+
+		.columns:nth-child(2n) {
+			width: 15%;
+		}
+
+		.columns:nth-child(3n) {
+			width: 35%;
+		}
+
+		.columns:last-child {
+			width: 15%;
+		}
+
+		.columns {
+			margin: 0;
+			position: relative;
+
+			&:after {
+				content: "\f0dd";
+				font-family: FontAwesome;
+				position: absolute;
+				top: 10px;
+				right: 20px;
+				color: #000;
+			}
+		}
 
 		input,
 		select {
@@ -70,19 +126,40 @@ html,
 		}
 
 		input[type="submit"] {
-			background: rgba(255,255,255,0.8);
+			background: blue;
 			border: none;
+			padding: 0;
+			color: #FFF;
 
 			&:hover {
 				background: rgba(255,255,255,1);
+				color: blue;
 			}
+		}
+
+		select {
+			-moz-appearance: none;
+			-webkit-appearance: none;
+			appearance: none;
+			border-right: 1px solid #000;
 		}
 	}
 
 	
 }
 
-
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px solid #000;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-bottom: 0 dotted;
+    content: "";
+}
 
 
 
@@ -98,15 +175,83 @@ html,
 
 
 /* Services container */
-.services-container {
+html #trade {
 
-	.columns:nth-child(3n+4) {
-		margin-left: 0;
+	.hentry {
+		border: none;
+		color: #000;
+	}
+	.services-container {
+
+		width: 100%;
+		max-width: none;
+
+		h3 {
+			text-align: center;
+			font-size: 24px;
+			font-weight: bold;
+			color: #000;
+		}
+
+		.columns {
+
+			margin: 0 1.25%;
+
+			.content {
+				border: 1px solid #000;
+				margin-bottom: 2em;
+
+				img {
+				margin: 0;
+			}
+
+				p {
+					text-align: center;
+					padding: 10px;
+					margin-top: -5px;
+					margin-bottom: 0;
+
+					a {
+						color: #000;
+					}
+				}
+			}
+		}
 	}
 }
 
 
+#trade .footer {
+	background: #FFF;
+	color: blue;
 
+}
+
+
+/* Contact [page */
+.hentry {
+
+	.wpcf7-form {
+		width: 80%;
+
+		input,
+		textarea {
+			border: 1px solid #000;
+			background: none;
+			max-width: none;
+		}
+
+		input[type="submit"] {
+			background: blue;
+			color: #FFF;
+			border: none;
+		}
+	}
+
+	.right-content {
+		font-size: 30px;
+	}
+}
 
 
 

@@ -50,6 +50,7 @@
 										) );
 									?>
 <div class="container services-container">
+	<h3>Below are other services you may be interested in</h3>
 <?php
     $args = array(
       'post_type' => 'trade',
@@ -61,7 +62,6 @@
         $products->the_post();
         ?>
         <div class="columns four">
-          <h1><?php the_title() ?></h1>
           <div class='content'>
           	<?php echo the_post_thumbnail( 'full' ); ?>
             <?php the_content() ?>

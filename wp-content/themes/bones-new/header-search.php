@@ -9,19 +9,15 @@
 		<meta charset="utf-8">
 
 		<?php // force Internet Explorer to use the latest rendering engine available 
-		$list = array();
 		$item = array();
 		foreach($_POST as $key => $value){
 			if($value != ''){
 				$item['taxonomy'] = htmlspecialchars($key);
 				$item['terms'] = htmlspecialchars($value);
 				$item['field'] = 'slug';
-				$list[] = $item;
 				$termlist[] = $item['terms']; // get values for set title
 			}
 		}
-		$cleanArray = array_merge(array('relation' => 'AND'), $list);
-		
 		$delimiters = array(' , ',' | ');
 		$i = 0;
 		foreach ($termlist as $value) {
@@ -108,20 +104,9 @@
 						</div>
 					<?php endwhile; ?>
 					</div>
-<div class="container">
-	<form class="row" method="post" action="<?php bloginfo('url');?>/trade-search-results/">
-		<?php $taxonomies = get_object_taxonomies('trade');
-		foreach($taxonomies as $tax){
 
-		echo '<div class="columns three">';
-			echo buildSelect($tax);
-		echo '</div>';
-		}
-		?>
-		<input class="columns three" type="submit"/>
-	</form>
-</div>
-
+					<?php include("page-templates/trade-search.php"); ?>
 
 				</div>
+
 			</header>

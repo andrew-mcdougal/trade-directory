@@ -1,7 +1,8 @@
 html,
 #trade {
   font-family: arial;
-  font-size: 12px; }
+  font-size: 12px;
+  background: #FFF; }
   html .header,
   #trade .header {
     text-align: center;
@@ -15,6 +16,17 @@ html,
       border-left: none;
       border-right: none;
       padding: 0.25em 0; }
+    html .header .tagline,
+    #trade .header .tagline {
+      font-size: 12px;
+      text-transform: uppercase;
+      margin: 0; }
+    html .header #menu-main li a,
+    #trade .header #menu-main li a {
+      color: #000;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: bold; }
   html a, html a:hover, html a:focus, html a:visited:hover, html a:visited:focus,
   #trade a,
   #trade a:hover,
@@ -25,7 +37,7 @@ html,
 
 /* top carousel thing */
 .main-carousel {
-  margin: 3em 0;
+  margin: 0 0 3em 0;
   border: 1px solid #ccc; }
   .main-carousel .business-pod {
     width: 100%;
@@ -48,8 +60,33 @@ html,
   width: 100%;
   padding: 20px;
   margin-bottom: 2em; }
+  .search-container h3 {
+    color: #FFF;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.01em; }
   .search-container form {
-    margin: 0; }
+    margin: 0 auto;
+    width: 80%; }
+    .search-container form .columns:first-child {
+      width: 35%; }
+    .search-container form .columns:nth-child(2n) {
+      width: 15%; }
+    .search-container form .columns:nth-child(3n) {
+      width: 35%; }
+    .search-container form .columns:last-child {
+      width: 15%; }
+    .search-container form .columns {
+      margin: 0;
+      position: relative; }
+      .search-container form .columns:after {
+        content: "\f0dd";
+        font-family: FontAwesome;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        color: #000; }
     .search-container form input,
     .search-container form select {
       font-family: arial;
@@ -57,13 +94,75 @@ html,
       border-radius: 0;
       margin-bottom: 0; }
     .search-container form input[type="submit"] {
-      background: rgba(255, 255, 255, 0.8);
-      border: none; }
+      background: blue;
+      border: none;
+      padding: 0;
+      color: #FFF; }
       .search-container form input[type="submit"]:hover {
-        background: white; }
+        background: white;
+        color: blue; }
+    .search-container form select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      border-right: 1px solid #000; }
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px solid #000;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-bottom: 0 dotted;
+  content: ""; }
 
 /* Services container */
-.services-container .columns:nth-child(3n+4) {
-  margin-left: 0; }
+html #trade .hentry {
+  border: none;
+  color: #000; }
+html #trade .services-container {
+  width: 100%;
+  max-width: none; }
+  html #trade .services-container h3 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000; }
+  html #trade .services-container .columns {
+    margin: 0 1.25%; }
+    html #trade .services-container .columns .content {
+      border: 1px solid #000;
+      margin-bottom: 2em; }
+      html #trade .services-container .columns .content img {
+        margin: 0; }
+      html #trade .services-container .columns .content p {
+        text-align: center;
+        padding: 10px;
+        margin-top: -5px;
+        margin-bottom: 0; }
+        html #trade .services-container .columns .content p a {
+          color: #000; }
+
+#trade .footer {
+  background: #FFF;
+  color: blue; }
+
+/* Contact [page */
+.hentry .wpcf7-form {
+  width: 80%; }
+  .hentry .wpcf7-form input,
+  .hentry .wpcf7-form textarea {
+    border: 1px solid #000;
+    background: none;
+    max-width: none; }
+  .hentry .wpcf7-form input[type="submit"] {
+    background: blue;
+    color: #FFF;
+    border: none; }
+.hentry .right-content {
+  font-size: 30px; }
 
 /*# sourceMappingURL=ontrend.css.map */
