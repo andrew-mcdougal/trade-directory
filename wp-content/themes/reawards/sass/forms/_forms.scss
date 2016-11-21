@@ -1,0 +1,130 @@
+@import "buttons";
+
+@import "fields";
+
+.form-half {
+	width: 40%;
+	float: left;
+	margin-right: 10%;
+	font-size: 18px;
+}
+
+.form-half:nth-child(2n+1) {
+	margin-right: 0;
+}
+
+
+
+/* input fields */
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"] {
+	border: none;
+	border-radius: 0;
+	font-size: 18px;
+	font-weight: 300;
+	margin: 1em 0;
+	padding: 10px 0;
+	border-bottom: 1px solid rgba(78,78,78,0.5);
+}
+
+.wpcf7-form-control-wrap:after {
+	content: '';
+	display: block;
+	width: 0%;
+	background: $rea-red;
+	height: 4px;
+	position: absolute;
+	bottom: -14px;
+	transition: all 0.3s ease-in;
+}
+
+.wpcf7-form-control-wrap.focussed:after {
+	width: 100%;
+}
+
+.wpcf7-form-control-wrap.something:after {
+	background: #72D596;
+	height: 1px;
+	width: 100%;
+}
+
+.form-statement {
+	clear: both;
+	margin: 4em 0;
+}
+
+.entry-content .form-statement hr {
+	margin-bottom: 0;
+}
+
+.entry-content .form-statement p {
+	font-size: 12px;
+	text-align: left;
+	color: rgba(78,78,78,0.5);
+	margin: 0.5em 0;
+}
+
+.form-check {
+	text-align: left;
+	font-size: 15px;
+}
+
+.entry-content .submit-button p {
+	text-align: right;
+	margin: 0;
+	float: right;
+}
+
+
+
+.wpcf7-submit[type="submit"] {
+    position: relative;
+    overflow: hidden;
+    background: #D41633 !important;
+    opacity: 1;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    text-shadow: none;
+    box-shadow: none;
+    color: #FFF;
+    font-weight: 300;
+    display: block;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,12 +2,18 @@ html,
 #trade {
   font-family: arial;
   font-size: 12px;
-  background: #FFF; }
+  background: #ccc; }
+  html .wrap,
+  #trade .wrap {
+    background: #FFF; }
   html .header,
   #trade .header {
     text-align: center;
-    background: #FFF;
+    background: #ccc;
     color: blue; }
+    html .header .wrap,
+    #trade .header .wrap {
+      padding: 20px; }
     html .header #logo a,
     #trade .header #logo a {
       color: blue;
@@ -38,11 +44,11 @@ html,
 /* top carousel thing */
 .main-carousel {
   margin: 0 0 3em 0;
-  border: 1px solid #ccc; }
+  border: 1px solid #000; }
   .main-carousel .business-pod {
     width: 100%;
     height: auto;
-    border: 1px solid #ccc;
+    border: 1px solid #000;
     display: flex;
     align-items: center;
     justify-content: center; }
@@ -80,13 +86,6 @@ html,
     .search-container form .columns {
       margin: 0;
       position: relative; }
-      .search-container form .columns:after {
-        content: "\f0dd";
-        font-family: FontAwesome;
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        color: #000; }
     .search-container form input,
     .search-container form select {
       font-family: arial;
@@ -107,17 +106,9 @@ html,
       appearance: none;
       border-right: 1px solid #000; }
 
-.caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 2px;
-  vertical-align: middle;
-  border-top: 4px solid #000;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-  border-bottom: 0 dotted;
-  content: ""; }
+/* content area */
+html #trade .standard-content p {
+  font-size: 16px; }
 
 /* Services container */
 html #trade .hentry {
@@ -147,8 +138,16 @@ html #trade .services-container {
           color: #000; }
 
 #trade .footer {
-  background: #FFF;
-  color: blue; }
+  background: #000;
+  color: white;
+  padding-top: 20px; }
+  #trade .footer .footer-links {
+    float: right; }
+    #trade .footer .footer-links .nav li a {
+      padding: 0;
+      color: white; }
+  #trade .footer .wrap {
+    background: #000; }
 
 /* Contact [page */
 .hentry .wpcf7-form {

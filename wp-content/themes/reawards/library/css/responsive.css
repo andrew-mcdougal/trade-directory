@@ -1,0 +1,669 @@
+/* Header split effect */
+@media all and (min-width: 2500px) {
+  .header-left {
+    background: #FFF;
+    width: 28%;
+  }
+}
+
+@media all and (max-width: 2500px) {
+  .header-left {
+    background: #FFF;
+    width: 20%;
+  }
+}
+
+@media all and (max-width: 1800px) {
+  .header-left {
+    background: #FFF;
+    width: 5%;
+  }
+}
+
+
+
+/* Nav */
+
+.site-overlay,
+.mobile {
+  display: none;
+}
+
+.nav-box {
+  width: 100px;
+  position: absolute;
+  top: 25px;
+  right: 0;
+}
+
+.nav-box .fa {
+  color: #FFF;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+@media all and (max-width: 1400px) {
+  .main-nav li {
+    padding: 0 20px;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .main-nav li {
+    padding: 0 10px;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .main-nav li {
+    font-size: 12px;
+    padding: 0 5px;
+  }
+}
+
+
+/* Responsive Nav under 1024px wide */
+@media all and (max-width: 1023px) {
+  .main-nav {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .site-overlay {
+    display: block;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Home page logo animation for under 767px wide */
+@media all and (max-width: 767px) {
+
+  .logo-intro {
+    margin-top: 5em;
+  }
+
+  .logo-intro svg {
+    width: 200px;
+    height: auto;
+  }
+
+  .intro-container h4 {
+    margin: 20px auto;
+    max-width: 80%;
+    font-size: 15px;
+  }
+
+  .intro-container .scroll-arrow {
+    margin-top: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Home page scroll animation for under 1050px high to 700px high */
+@media all and (max-height: 1050px) {
+  .header-container {
+    padding: 10px 0;
+  }
+
+  .header-container h2 {
+    font-size: 25px;
+  }
+
+  .f2 h3,
+  .f2 p {
+    margin: 10px 0 0 0;
+    font-size: 15px;
+  }
+
+  #stage,
+  #stage-2 {
+    top: 0px;
+  }
+
+  .dong-links-container {
+    top: 0px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Menu for responsive full page */
+.mobile-nav {
+  width: 0px;
+  min-height: 0px;
+  background: rgba(16,27,36,0.9);
+  position: absolute;
+  z-index: 10000;
+  top: 0px;
+  right: 10px;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transition-property: min-height, width, top, right;
+  transition-property: min-height, width, top, right;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.mobile-nav.open {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0px;
+  right: 0px;
+}
+
+
+
+
+.mobile-nav .contents {
+  position: relative;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in;
+  -moz-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+}
+
+
+.mobile-nav svg {
+  width: 200px;
+}
+
+.mobile-nav {
+  text-align: center;
+}
+
+.mobile-menu {
+  margin: 0!important;
+  padding: 0!important;
+}
+
+.mobile-nav li {
+  list-style: none;
+  text-transform: uppercase;
+  margin: 30px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.mobile-nav li a {
+  color: #FFF;
+}
+
+.mobile-nav li a:hover {
+  color: #D41633;
+}
+
+
+@media all and (max-height: 630px) {
+  .mobile-nav li {
+    margin: 15px 0;
+  }
+}
+
+
+
+
+
+
+
+/************************** MOBILE HOME ANIMATIONS **************************/
+/************************** MOBILE HOME ANIMATIONS **************************/
+/************************** MOBILE HOME ANIMATIONS **************************/
+
+
+
+
+
+
+@media all and (max-width: 600px) {
+
+  .header,
+  .header-logo,
+  .header-float-container,
+  .header-left, .header-right {
+    height: 60px;
+  }
+
+  .mobile.nav-box {
+    top: 12px;
+  }
+
+  .nav-box .fa {
+    margin-top: 5px;
+  }
+
+  .scroll-nav {
+    display: none;
+  }
+
+
+  /* After video */
+  .header-container {
+    padding: 20px 10%;
+  }
+
+/* keep all heading text consistent */
+/* For the header info animation */
+.header-container h2,
+.home-text h3,
+.home-text p {
+  margin: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+  max-width: 300px;
+}
+
+.home-text p {
+  margin-top: 1em;
+}
+
+.home-text {
+  display: block;
+  padding: 20px 10%;
+}
+
+.header-container h2.active,
+.home-text h3.active,
+.home-text p.active {
+  opacity: 1;
+}
+
+
+.fullscreen.f2 {
+    width: 100%;
+    height: 3000px;
+}
+
+#stage {
+  width:320px;
+  height: auto;
+  background: none;
+  top: 40px;
+  margin: auto;
+  text-align: center;
+}
+
+#building-container {
+  display: none;
+}
+
+
+#building-container-mobile {
+  display: block;
+  margin: 80px auto 0 auto;
+  width: 300px;
+  position: relative;
+  height: 2000px;
+}
+
+
+#building-container-mobile svg {
+  width: 280px;
+}
+
+
+#building-container-mobile svg#clouds {
+  width: 1500px;
+  position: absolute;
+}
+
+
+/* logo draw and rotate */
+.rea-logo {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+
+.svg-logo-inner {
+    position: absolute;
+    bottom: 23px;
+    left: 22px;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    width: 27px;
+    height: 27px;
+}
+
+
+.rea-logo {
+    left: 0;
+    bottom: auto;
+    top: 50px;
+}
+
+.logo-white-path.active {
+    width: 2406px!important;
+    background: rgba(42,62,76,0.5);
+}
+
+
+.dong-links-container {
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    position: relative;
+    margin-top: 157px;
+    left: auto;
+    top: none;
+}
+
+
+.all-buildings-1, .all-buildings-2, .clouds {
+  left: 20px;
+}
+
+
+.dong-link {
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    opacity: 0;
+    display: none;
+    padding: 5px 10px;
+    z-index: 300;
+}
+
+.dong-links-container {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: block;
+}
+
+.dong-links-container .dong-link {
+  display: table;
+  transition: all 0.2s ease-out;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+.dong-links-container .dong-link p {
+  margin: 0;
+}
+
+.build-1-on .dong-links-container { top: 630px;}
+.build-2-on .dong-links-container { top: 930px;}
+.build-3-on .dong-links-container { top: 1150px;}
+.build-4-on .dong-links-container { top: 1400px;}
+.build-5-on .dong-links-container { top: 1840px;}
+.build-6-on .dong-links-container { top: 2200px;}
+.build-7-on .dong-links-container { top: 2490px;}
+.build-8-on .dong-links-container { top: 2750px;}
+
+.build-1-on .dong-1 { opacity: 1;}
+.build-2-on .dong-2 { opacity: 1;}
+.build-3-on .dong-3 { opacity: 1;}
+.build-4-on .dong-4 { opacity: 1;}
+.build-5-on .dong-5 { opacity: 1;}
+.build-6-on .dong-6 { opacity: 1;}
+.build-7-on .dong-7 { opacity: 1;}
+.build-8-on .dong-8 { opacity: 1;}
+
+
+
+
+.all-buildings-1 line,
+.all-buildings-1 circle,
+.all-buildings-1 polyline,
+.all-buildings-1 path,
+.all-buildings-1 rect {
+  transition: all 0.3s ease-in;
+}
+
+
+
+/* Turn each building on */
+.build-1-on #building-1 line,
+.build-1-on #building-1 circle,
+.build-1-on #building-1 polyline,
+.build-1-on #building-1 rect,
+.build-1-on #building-1 path,
+
+.build-2-on #building-2 line,
+.build-2-on #building-2 circle,
+.build-2-on #building-2 polyline,
+.build-2-on #building-2 rect,
+.build-2-on #building-2 path,
+
+.build-3-on #building-3 line,
+.build-3-on #building-3 circle,
+.build-3-on #building-3 polyline,
+.build-3-on #building-3 rect,
+.build-3-on #building-3 path,
+
+.build-4-on #building-4 line,
+.build-4-on #building-4 circle,
+.build-4-on #building-4 polyline,
+.build-4-on #building-4 rect,
+.build-4-on #building-4 path,
+
+.build-5-on #building-5 line,
+.build-5-on #building-5 circle,
+.build-5-on #building-5 polyline,
+.build-5-on #building-5 rect,
+.build-5-on #building-5 path,
+
+.build-6-on #building-6 line,
+.build-6-on #building-6 circle,
+.build-6-on #building-6 polyline,
+.build-6-on #building-6 rect,
+.build-6-on #building-6 path,
+
+.build-7-on #building-7 line,
+.build-7-on #building-7 circle,
+.build-7-on #building-7 polyline,
+.build-7-on #building-7 rect,
+.build-7-on #building-7 path,
+
+.build-8-on #building-8 line,
+.build-8-on #building-8 circle,
+.build-8-on #building-8 polyline,
+.build-8-on #building-8 rect,
+.build-8-on #building-8 path {
+  stroke: #FFF;
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

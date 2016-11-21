@@ -1,0 +1,175 @@
+$grey: #C7C7C7;
+
+$mainfont: 'museo-sans', helvetica, sans-serif;
+
+ .site-footer {
+  background: #FFF;
+  height: 60px;
+  border-top: 1px solid $grey;
+}
+
+.footer-inner {
+  background: #FFF;
+}
+
+.footer-inner div {
+  height: 100%;
+}
+
+.footer-logo img {
+  width: 157px;
+  height: auto;
+  margin-top: 15px;
+}
+
+.footer-middle {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.site-footer ul {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer p,
+.site-footer li {
+  font: $mainfont;
+  color: $grey;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.site-footer li {
+  padding: 8px;
+  border-left: 1px solid $grey;
+  line-height: 10%;
+}
+
+.site-footer li:last-child {
+  padding-right: 0;
+}
+
+.site-footer li a {
+  color: $grey;
+
+}
+
+.footer-social {
+  margin-top: 10px;
+}
+
+.site-footer .fa {
+  margin: 0 5px;
+  border: 1px solid $grey;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 10px;
+  color: $grey;
+  transition: all 0.3s ease-in;
+  font-size: 1em;
+}
+
+.site-footer .fa-twitter:hover {
+  color: #55ACEE;
+  border-color: #55ACEE;
+}
+
+.site-footer .fa-facebook-official:hover {
+  color: #3B5998;
+  border-color: #3B5998;
+}
+
+.site-footer .fa-google-plus:hover {
+  color: #dd4b39;
+  border-color: #dd4b39;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+@media all and (max-width: 1130px) {
+  .footer-middle {
+    margin-top: 5px;
+  }
+
+  .footer-middle p {
+    margin: 0;
+  }
+
+  .site-footer ul {
+    display: block;
+  }
+
+  .site-footer ul li:first-child {
+    border: none;
+  }
+
+  .site-footer ul li {
+    margin: 0;
+  }
+}
+
+
+@media all and (max-width: 720px) {
+  .footer-inner .columns {
+    width: 320px;
+    padding: 10px 0;
+    margin: 0 auto;
+    display: block;
+    float: none;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

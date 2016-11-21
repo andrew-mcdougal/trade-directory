@@ -1,0 +1,588 @@
+/* preloader */
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* =Preloader */
+#preloader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  background-color: rgba(16,27,36,1);
+  color: #ffffff; 
+  display: none;
+}
+
+.home #preloader {
+  display: block;
+}
+  
+  #preloader.is-hidden {
+    visibility: hidden;
+    opacity: 0; }
+
+.is-loading {
+  overflow: hidden; }
+
+/* Preloader */
+
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(16,27,36,1);
+    z-index:3000; /* makes sure it stays on top */
+}
+
+/* preloader */
+
+/* preloader logo */
+
+.preloader-inner {
+  width: 250px;
+  height: 300px;
+  position: absolute;
+}
+
+.preload-logo {
+  width: 250px;
+  height: auto;
+}
+
+#preload-shape {
+  fill: none;
+  stroke: #D41633;
+  stroke-width: 20;
+}
+
+.preload-house-logo {
+  position: relative;
+}
+
+
+
+
+
+
+
+
+
+.viewport-size {
+  position: fixed;
+  bottom: 100px;
+  left: 50px;
+  background: green;
+  padding: 20px;
+  display: block;
+  z-index: 3000;
+  display: none;
+}
+
+
+
+
+
+#stage {
+  height: 500px;
+  /*border: 1px solid red;*/
+  position: relative;
+}
+
+
+
+body {
+  font: 16px/1.5 'museo-sans', Helvetica, Helvetica Neue, Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.9);
+  background: #080F16;
+  overflow-x: hidden;
+}
+ 
+html, body {
+  height: 100%;
+  margin: 0;
+  color: #FFF;
+}
+
+
+
+ 
+h1 {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 36px;
+  color: #FFF;
+  position: relative;
+  font-family: 'museo-sans';
+}
+
+h2 {
+  margin: 0;
+  font-weight: 100;
+}
+
+h2,
+h3,
+h4 {
+  color: #FFF;
+  font-family: 'museo-sans';
+}
+ 
+p {
+  text-align: center;
+  color: #FFF;
+  font-family: 'museo-sans';
+  font-weight: 300;
+}
+ 
+strong {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+
+
+/*** Intro page to scroll up and reveal building drawing animations ***/
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+
+/* Sections full screen height */
+.fullscreen {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+/* fullscreen colors */
+.f1 { background: #101B24;}
+.f2 { background: #101B24; z-index: 100;}
+.f3 { background: #22d659;}
+.f4 { background: #953543;}
+.f5 { background: #000000;}
+
+.f2 {
+  margin-top: 0px;
+}
+
+/* Inro header container */
+.header-container {
+  background: #080F16;
+  padding: 90px 0 18px 0;
+  /*margin-top: -44px;*/
+}
+
+.header-container h2 {
+  margin: 0;
+}
+
+.f2 h3 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.f2 p {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+
+
+.page-fader,
+.building-fader {
+    opacity: 0;
+    transition: opacity .75s ease-out;
+}
+
+.building-fader.alive {
+    opacity: 1;
+}
+
+
+
+
+
+/* Header & Footer */
+.header,
+.footer {
+  position: fixed;
+  width: 100%;
+  background: #FFF;
+  text-align: left;
+  color: #101B24;
+  z-index: 20000;
+}
+/* Header */
+.header {
+  width: 100%;
+  height: 85px;
+  top: 0;
+  background: rgba(16,27,36,0.6);
+}
+
+.header-float-container {
+  width: 100%;
+  height: 85px;
+  background: rgba(16,27,36,0.6);
+  position: absolute;
+}
+
+.header-left,
+.header-right {
+  float: left;
+  width: 50%;
+  height: 85px;
+}
+
+.header-left {
+  background: #FFF;
+  width: 13%;
+}
+
+.header-right {
+  float: right;
+  width: 80%;
+}
+
+.header .site-width {
+  margin-top: 0px;
+  position: relative;
+  z-index: 100;
+  /*border: 1px solid red;*/
+}
+
+
+
+
+
+
+/*** NAVIGATION ***/
+.header-logo,
+.main-nav {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: -120px;
+}
+
+.header-logo {
+  margin-left: -120px;
+}
+
+.main-nav {
+  margin: 22px 0 0 0;
+  padding: 0;
+}
+
+.main-nav li {
+  display: inline-block;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+  padding: 0 27px;
+}
+
+.main-nav li:last-child {
+  padding-right: 0;
+  position: relative;
+  top: 8px;
+}
+
+.main-nav li a {
+  color: #FFF;
+}
+
+.main-nav li a:hover,
+.main-nav li.current-page-ancestor a,
+.main-nav li.current_page_item a {
+  color: #D41633;
+}
+
+.search-icon {
+  cursor: pointer;
+  position: relative;
+  top: 7px;
+}
+
+.search-icon:hover #Search {
+  fill: #FFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+.footer {
+  bottom: 0;
+  height: 0px;
+  transition: all 0.3s ease-out;
+  background: none;
+  border: 2px solid #264863;
+}
+
+.footer.active {
+  height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*** INTRO ANIMATION ***/
+
+.intro-container {
+  display: block;
+  z-index: 100;
+  position: absolute;
+  width: auto;
+  height: auto;
+  opacity: 0;
+}
+
+.intro-container h4 {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 300;
+  margin: 80px 0 60px 0;
+  max-width: 750px;
+}
+
+.intro-container a {
+  color: #FFF;
+  background: #D41633;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+
+/* Triggers */
+.intro-container .scroll-arrow {
+  color: #FFF;
+  display: block;
+  font-size: 30px;
+  margin-top: 2em;
+  position: relative;
+  cursor: pointer;
+}
+
+
+
+.logo-intro svg {
+  width: 419px;
+  height: 190px;
+}
+
+#shape {
+  fill: none;
+  stroke: #D41633;
+  stroke-width: 10;
+}
+
+.rea-white {
+  fill:#FFFFFF;
+  stroke: none;
+}
+
+.rea-red {
+  fill:#D41633;
+  stroke: none;
+}
+
+
+/* Fade in large letters of AREA and the rest of the logo */
+#rea-logo #area path,
+#rea-logo .annual-rea-excellence-awards,
+.intro-container h4,
+.intro-button,
+.scroll-arrow {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+#area path.active {
+  opacity: 1;
+}
+
+#rea-logo .house-logo {
+  transform-origin: 25px 25px;
+  transform: scale(0);
+}
+
+/*** INTRO ANIMATION ***/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*** Video ***/
+.video-overlay {
+  position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    padding-bottom: 20px;
+    
+    
+    z-index: 100;
+    background: rgba(16,27,36,0.6);
+    cursor: pointer;
+}
+video { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 50;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+ background: none;
+  background-size: cover;
+  transition: 1s opacity;
+  background: none;
+}
+
+
+
+
+/* no intro if home link or back to menu link used to get to home */
+.no-intro-bro .no-show {
+  display: none!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*** DESKTOP WIDTH ***/
+.site-width {
+  max-width: 1400px;
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

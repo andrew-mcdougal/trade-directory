@@ -21,11 +21,45 @@
 
 						<main id="main" class="m-all t-3of3 d-7of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 								<section class="entry-content cf" itemprop="articleBody">
+
+									<div class="container services-container">
+										<h3>Below are other services you may be interested in</h3>
+										<?php
+										$args = array(
+											'post_type' 		=> 'trade',
+										    'showposts'		=> 9
+										    );
+										$products = new WP_Query( $args );
+										if( $products->have_posts() ) {
+											while( $products->have_posts() ) {
+												$products->the_post(); ?>
+										    <div class="columns four">
+										    	<div class='content'>
+										    		<?php echo the_post_thumbnail( 'full' ); ?>
+										    		<?php the_content() ?>
+										    	</div>
+										    </div>
+										    <?php } }
+										    else { echo 'Oh ohm no products!'; }
+										    ?>
+
+										<hr />
+
+								</section>
+
+							</article>
+
+							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+								<section class="entry-content cf standard-content" itemprop="articleBody">
+
 									<?php
 										// the content (pretty self explanatory huh)
 										the_content();
@@ -49,31 +83,6 @@
 											'link_after'  => '</span>',
 										) );
 									?>
-<div class="container services-container">
-	<h3>Below are other services you may be interested in</h3>
-<?php
-    $args = array(
-      'post_type' => 'trade',
-      
-    );
-    $products = new WP_Query( $args );
-    if( $products->have_posts() ) {
-      while( $products->have_posts() ) {
-        $products->the_post();
-        ?>
-        <div class="columns four">
-          <div class='content'>
-          	<?php echo the_post_thumbnail( 'full' ); ?>
-            <?php the_content() ?>
-          </div>
-      </div>
-        <?php
-      }
-    }
-    else {
-      echo 'Oh ohm no products!';
-    }
-  ?>
 								</section>
 
 							</article>

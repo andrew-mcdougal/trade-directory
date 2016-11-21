@@ -1,0 +1,539 @@
+/* Header split effect */
+@media all and (min-width: 2500px) {
+  .header-left {
+    background: #FFF;
+    width: 28%;
+  }
+}
+
+@media all and (max-width: 2500px) {
+  .header-left {
+    background: #FFF;
+    width: 20%;
+  }
+}
+
+@media all and (max-width: 1800px) {
+  .header-left {
+    background: #FFF;
+    width: 5%;
+  }
+}
+
+
+
+/* Nav */
+
+.site-overlay,
+.mobile {
+  display: none;
+}
+
+.nav-box {
+  width: 100px;
+  position: absolute;
+  top: 25px;
+  right: 0;
+}
+
+.nav-box .fa {
+  color: #FFF;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+@media all and (max-width: 1400px) {
+  .main-nav li {
+    padding: 0 20px;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .main-nav li {
+    padding: 0 10px;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .main-nav li {
+    font-size: 12px;
+    padding: 0 5px;
+  }
+}
+
+
+/* Responsive Nav under 1024px wide */
+@media all and (max-width: 1023px) {
+  .main-nav {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .site-overlay {
+    display: block;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Home page logo animation for under 767px wide */
+@media all and (max-width: 767px) {
+
+  .logo-intro {
+    margin-top: 5em;
+  }
+
+  .logo-intro svg {
+    width: 200px;
+    height: auto;
+  }
+
+  .intro-container h4 {
+    margin: 20px auto;
+    max-width: 80%;
+    font-size: 15px;
+  }
+
+  .intro-container .scroll-arrow {
+    margin-top: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Home page scroll animation for under 1050px high to 700px high */
+@media all and (max-height: 1050px) {
+  .header-container {
+    padding: 10px 0;
+  }
+
+  .header-container h2 {
+    font-size: 25px;
+  }
+
+  .f2 h3,
+  .f2 p {
+    margin: 10px 0 0 0;
+    font-size: 15px;
+  }
+
+  #stage {
+    top: -40px;
+  }
+
+  .dong-links-container {
+    top: -160px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Menu for responsive full page */
+.mobile-nav {
+  width: 0px;
+  min-height: 0px;
+  background: rgba(16,27,36,0.9);
+  position: absolute;
+  z-index: 10000;
+  top: 0px;
+  right: 10px;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transition-property: min-height, width, top, right;
+  transition-property: min-height, width, top, right;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.mobile-nav.open {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0px;
+  right: 0px;
+}
+
+
+
+
+.mobile-nav .contents {
+  position: relative;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in;
+  -moz-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+}
+
+
+.mobile-nav svg {
+  width: 200px;
+}
+
+.mobile-nav {
+  text-align: center;
+}
+
+.mobile-menu {
+  margin: 0!important;
+  padding: 0!important;
+}
+
+.mobile-nav li {
+  list-style: none;
+  text-transform: uppercase;
+  margin: 30px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.mobile-nav li a {
+  color: #FFF;
+}
+
+.mobile-nav li a:hover {
+  color: #D41633;
+}
+
+
+@media all and (max-height: 630px) {
+  .mobile-nav li {
+    margin: 15px 0;
+  }
+}
+
+
+
+
+
+
+
+/************************** MOBILE HOME ANIMATIONS **************************/
+/************************** MOBILE HOME ANIMATIONS **************************/
+/************************** MOBILE HOME ANIMATIONS **************************/
+
+
+
+
+
+
+@media all and (max-width: 600px) {
+
+  .header,
+  .header-logo,
+  .header-float-container,
+  .header-left, .header-right {
+    height: 60px;
+  }
+
+  .mobile.nav-box {
+    top: 12px;
+  }
+
+  .nav-box .fa {
+    margin-top: 5px;
+  }
+
+  .scroll-nav {
+    display: none;
+  }
+
+  /* keep all heading text consistent */
+  .f2 .header-container h2,
+  .f2 h3,
+  .f2 p {
+    max-width: 320px;
+    margin: auto;
+  }
+
+
+.fullscreen.f2 {
+    width: 100%;
+    height: 1000px;
+}
+
+#stage {
+  width:320px;
+  height: 400px;
+  background: none;
+  top: 85px;
+  margin: auto;
+  text-align: center;
+}
+
+#building-container {
+  display: none;
+}
+
+
+#building-container-mobile {
+  display: block;
+  margin: 80px auto 0 auto;
+  width: 300px;
+  position: relative;
+}
+
+
+#building-container-mobile svg {
+  width: 280px;
+}
+
+
+#building-container-mobile svg#clouds {
+  width: 1500px;
+  position: absolute;
+}
+
+
+/* logo draw and rotate */
+.rea-logo {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+
+.svg-logo-inner {
+    position: absolute;
+    bottom: 23px;
+    left: 22px;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    width: 27px;
+    height: 27px;
+}
+
+
+.rea-logo {
+    left: 0;
+    bottom: auto;
+    top: 50px;
+}
+
+.logo-white-path.active {
+    width: 2000px!important;
+    background: rgba(42,62,76,0.5);
+}
+
+
+.dong-links-container {
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    position: relative;
+    margin-top: 157px;
+    left: auto;
+    top: none;
+}
+
+
+.all-buildings-1, .all-buildings-2, .clouds {
+  left: 20px;
+}
+
+
+.dong-link {
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    opacity: 0;
+    display: none;
+    padding: 5px 10px;
+    z-index: 300;
+}
+
+.dong-link.active {
+  display: table;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

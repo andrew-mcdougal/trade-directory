@@ -48,9 +48,29 @@
 									$the_query = new WP_Query( $args );
 									?>
 
+<?php // force Internet Explorer to use the latest rendering engine available 
+$item = array();
+foreach($_POST as $key => $value){
+	if($value != ''){
+		$item['taxonomy'] = htmlspecialchars($key);
+		$item['terms'] = htmlspecialchars($value);
+		$item['field'] = 'slug';
+		$termlist[] = $item['terms']; // get values for set title
+	}
+}
+$delimiters = array(', ',', ');
+$i = 0;
+foreach ($termlist as $value) {
+	$termlist[$i] .= $delimiters[$i];
+	$i++;
+}
+$terms = implode($termlist);
+$FinalText = ucwords($terms);
+?>
+
 
 <div class="container services-container">
-<?php echo ($the_query->found_posts > 0) ? '<h3 class="foundPosts">' . $the_query->found_posts. ' listings found</h3>' : '<h3 class="foundPosts">We found no results</h3>';?>
+<?php echo ($the_query->found_posts > 0) ? '<h3 class="foundPosts">' . $the_query->found_posts. ' services found under: ' . $FinalText . '</h3>' : '<h3 class="foundPosts">We found no results</h3>';?>
 	<?php while ( $the_query->have_posts() ) : $the_query->the_post();?>
 	<div class="columns four">
 	<div class='content'>
@@ -76,6 +96,35 @@ endif;
 
 	<?php endwhile; wp_reset_postdata();?>
 	</div>
+
+
+	<div class="container services-container">
+	<h3>Below are other services you may be interested in</h3>
+<?php
+    $args = array(
+      'post_type' 		=> 'trade',
+      'showposts'		=> 9
+
+      
+    );
+    $products = new WP_Query( $args );
+    if( $products->have_posts() ) {
+      while( $products->have_posts() ) {
+        $products->the_post();
+        ?>
+        <div class="columns four">
+          <div class='content'>
+          	<?php echo the_post_thumbnail( 'full' ); ?>
+            <?php the_content() ?>
+          </div>
+      </div>
+        <?php
+      }
+    }
+    else {
+      echo 'Oh ohm no products!';
+    }
+  ?>
 
 <div class="row page-navigation">
 	 <?php next_posts_link('&laquo; Older Entries', $the_query->max_num_pages) ?>
@@ -104,6 +153,23 @@ endif;
 									</article>
 
 							<?php endif; ?>
+
+							
+
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+								<section class="entry-content cf standard-content" itemprop="articleBody">
+
+									<?php $my_query = new WP_Query('page_id=15');
+									while ($my_query->have_posts()) : $my_query->the_post();
+									$do_not_duplicate = $post->ID;?>
+									 
+									        <?php the_content(); ?>
+									 
+									 <?php endwhile; ?>
+								</section>
+
+							</article>
 
 						</main>
 

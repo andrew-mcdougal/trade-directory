@@ -1,0 +1,37 @@
+<?php
+/*
+* Template Name: Page: In the Media (blog)
+*/
+
+get_header(); ?>
+
+
+
+	<div id="section-header">
+		<h2><?php echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent ); ?></h2>
+	</div>
+
+	<div id="primary" class="content-area in-the-media-page">
+
+
+
+		<main id="main" class="site-main max-width" role="main">
+
+				<?php query_posts('post_type=post&post_status=publish&posts_per_page=10&paged='. get_query_var('paged')); ?>
+
+				<?php
+				while ( have_posts() ) : the_post(); ?>
+					<!-- build the post -->
+					<a href="<?php the_permalink(); ?>">
+						<h5><?php the_time('F j, Y') ?></h5>
+						<h2><?php the_title() ?></h2>
+					</a>
+					<?php
+				endwhile; // End of the loop.
+				?>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+<?php
+get_footer();

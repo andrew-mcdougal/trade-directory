@@ -6,7 +6,7 @@
 		$('.main-carousel').slick({
 			arrows: true,
 			dots: true,
-			autoplay: false,
+			autoplay: true,
 			slidesToShow: 3,
 			slidesToScroll: 1,
 			infinite: true,
@@ -21,9 +21,9 @@
 
 
 
-		$('.search-container select option:contains("Select Trade_category")').text('Trades and Services');
-		$('.search-container select option:contains("Select State_category")').text('State');
-		$('.search-container select option:contains("Select Region_category")').text('Area/Region/Suburb');
+		$('.search-container select option:contains("Select Trade_category")').html('Trades and Services &#x25BC;');
+		$('.search-container select option:contains("Select State_category")').html('State &#x25BC;');
+		$('.search-container select option:contains("Select Region_category")').html('Area/Region/Suburb &#x25BC;');
 
 
 	}); // end document ready

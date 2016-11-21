@@ -1,0 +1,263 @@
+/* Clouds left and right slowly */
+.clouds.slow {
+  -webkit-animation: slide 200s ease-out infinite;
+  -moz-animation: slide 200s ease-out infinite;
+  animation: slide 200s ease-out infinite;
+}
+
+
+@-webkit-keyframes slide
+{
+    0%   {left:0;}
+    50% {left: -400px;}
+    100% {left: 0;}
+}​
+
+@-moz-keyframes slide
+{
+    0%   {left:0;}
+    50% {left: -400px;}
+    100% {left: 0;}
+}
+
+@keyframes slide
+{
+    0%   {left:0;}
+    50% {left: -400px;}
+    100% {left: 0;}
+}
+
+
+
+
+
+
+/* Logo icon grow animation */
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes grow-rotate {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: rotate(-90deg) scale(1);
+  }
+}
+
+.svg-logo-inner.active {
+  -webkit-animation: grow 1s ease-out forwards;
+  -moz-animation: grow 1s ease-out forwards;
+  animation: grow 1s ease-out forwards;
+}
+
+.no-building-animation .svg-logo-inner.active {
+  -webkit-animation: grow-rotate 1s ease-out forwards;
+  -moz-animation: grow-rotate 1s ease-out forwards;
+  animation: grow-rotate 1s ease-out forwards;
+}
+
+
+
+
+
+
+/* Baseline draw width animation */
+@keyframes baseline-draw {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes baseline-draw-back {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+/* Logo icon line path */
+/*
+.logo-white-path.active {
+  -webkit-animation: baseline-draw 1.5s ease-out forwards;
+  -moz-animation: baseline-draw 1.5s ease-out forwards;
+  animation: baseline-draw 1.5s ease-out forwards;
+}
+
+.logo-white-path {
+  -webkit-animation: baseline-draw-back 0.2s ease-out forwards;
+  -moz-animation: baseline-draw-back 0.2s ease-out forwards;
+  animation: baseline-draw-back 0.2s ease-out forwards;
+}
+*/
+
+
+/* svg 2 lines animation opacity */
+@keyframes line-opacity {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+    /*transform: scale(1.05);*/
+  }
+  40% {
+    opacity: 0.5;
+    /*transform: scale(0.95);*/
+  }
+  60% {
+    opacity: 0.8;
+    /*transform: scale(1.05);*/
+  }
+  80% {
+    opacity: 0.5;
+    /*transform: scale(0.95);*/
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes line-opacity-back {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.5;
+    /*transform: scale(1.05);*/
+  }
+  40% {
+    opacity: 0.8;
+    /*transform: scale(0.95);*/
+  }
+  60% {
+    opacity: 0.5;
+    /*transform: scale(1.05);*/
+  }
+  80% {
+    opacity: 0.8;
+    /*transform: scale(0.95);*/
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+/* Logo icon line path */
+.all-buildings-2 .lights,
+.all-buildings-2 .tower-lines {
+  /*-webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-animation: line-opacity-back 0.5s ease-out forwards;
+  -moz-animation: line-opacity-back 0.5s ease-out forwards;
+  animation: line-opacity-back 0.5s ease-out forwards;*/
+}
+.lightup-1 #building-1 .lights,
+.lightup-2 #building-2 .lights,
+.lightup-3 #building-3 .lights,
+.lightup-4 #building-4 .lights,
+.lightup-5 #building-5 .lights,
+.lightup-6 #building-6 .lights,
+.lightup-7 #building-7 .lights,
+.lightup-8 #building-8 .lights,
+.lightup-1 #building-1 .tower-lines {
+ /* -webkit-animation: line-opacity 0.5s ease-out forwards;
+  -moz-animation: line-opacity 0.5s ease-out forwards;
+  animation: line-opacity 0.5s ease-out forwards;*/
+}
+
+
+
+
+/* Dong grow */
+@keyframes grow-dong {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes grow-dong-back {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+#building-container .dong-link.active {
+  /*-webkit-animation: grow-dong 1s ease-out forwards;
+  -moz-animation: grow-dong 1s ease-out forwards;
+  animation: grow-dong 1s ease-out forwards;*/
+}
+#building-container .dong-link {
+ /* -webkit-animation: grow-dong-back .3s ease-in forwards;
+  -moz-animation: grow-dong-back .3s ease-in forwards;
+  animation: grow-dong-back .3s ease-in forwards;*/
+}
+
+
+.red-dong.active {
+  opacity: 0;
+  /*-webkit-transition: opacity 0.3s ease-in;
+  -moz-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

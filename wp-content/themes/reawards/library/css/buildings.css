@@ -1,0 +1,466 @@
+/***
+
+  Logo svg
+
+***/
+.rea-logo {
+  width: 100%;
+  height: 75px;
+  position: absolute;
+  left: 65px;
+  background: rgba(255,255,255,0.3);
+  background: none;
+  text-align: left;
+  bottom: 103px;
+}
+.svg-logo-outer {
+  width: auto;
+  height: 100%;
+}
+
+/* The logo path styles */
+path#logo {
+  fill: none;
+  stroke: rgba(212,22,51,1);
+  stroke-width: 4;
+
+  
+  stroke-dasharray: 215;
+  stroke-dashoffset: 215;
+  /*stroke-dashoffset: 0;*/
+}
+
+.svg-logo-inner {
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+
+  width: 27px;
+  height:27px;
+  z-index: 1000;
+}
+
+
+/* White and Red path */
+.logo-white-path {
+    position: absolute;
+    bottom: 35px;
+    left: 45px;
+    width: 100%;
+    height: 3px;
+    background: #FFF;
+    width: 0;
+    z-index: 1000;
+}
+
+.logo-red-path {
+    position: absolute;
+    height: 3px;
+    background: rgba(212,22,51,1);
+    width: 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#building-container {
+	height: 100%;
+	/*background: rgba(255,255,255,0.3);*/
+  background: none;
+	position: absolute;
+	left: 203px;
+}
+
+#building-container svg {
+	height: 100%;
+}
+
+#building-container-mobile {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/*** All buildings ***/
+.svg-building {
+  transition: all 0.3s ease-in;
+}
+
+
+.all-buildings-1,
+.all-buildings-2,
+.clouds {
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+/* All Buildings 1 */
+.all-buildings-1 {
+  z-index: 100;
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+/* All Buildings 2 */
+.all-buildings-2 {
+  z-index: 200;
+  opacity: 1;
+}
+.all-buildings-2 path,
+.clouds path {
+  stroke: #FFF;
+  fill: none;
+}
+
+
+
+
+/*** Clouds ***/
+.clouds {
+  position: relative;
+  left: 2000px;
+  transition: all 1s ease-in;
+  /*display: none;*/
+}
+
+.clouds.slow,
+.clouds.after {
+  left: 0;
+}
+
+
+
+/**** ---------------**** ---------------**** ---------------****
+
+  BUILDING DETAILS
+
+/**** ---------------**** ---------------**** ---------------****/
+
+
+/* BUILDING FADE OUT AFTER SCROLLING LEFT */
+.no-focus-1 #building-1,
+.no-focus-2 #building-2,
+.no-focus-3 #building-3,
+.no-focus-4 #building-4,
+.no-focus-5 #building-5,
+.no-focus-6 #building-6,
+.no-focus-7 #building-7 {
+  opacity: 0;
+}
+
+
+/* BUILDING WALL COLOURS */
+
+/* All buildings path setup */
+.all-buildings-1 path,
+.all-buildings-2 path {
+    fill: none;
+    stroke: rgba(255,255,255,1);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    /*stroke-dashoffset: 0!important;*/
+}
+
+/* All buildings line setup */
+.all-buildings-1 line,
+.all-buildings-2 line {
+    clip-path: none;
+}
+
+/* specific paths and other shapes */
+.all-buildings-2 .thin {
+  stroke-width: 1;
+}
+
+
+
+/* Faded original Buildings */
+.all-buildings-1 line,
+.all-buildings-1 circle,
+.all-buildings-1 polyline,
+.all-buildings-1 path,
+.all-buildings-1 rect {
+  opacity: 1;
+  stroke: rgba(42,62,76,1);
+  fill: none;
+}
+
+/* All buildings one circle dong */
+.all-buildings-1 circle.dong {
+  fill: rgba(42,62,76,1);
+  stroke: none;
+}
+
+/* All buildings 1 shadows */
+.all-buildings-1 .shadows polygon,
+.all-buildings-1 .shadows polyline,
+.all-buildings-1 .shadows rect,
+.all-buildings-1 .shadows path {
+  fill: rgba(42,62,76,0.2);
+  stroke: none;
+  /*fill: red;*/
+}
+
+
+
+
+
+
+/* Building 2 to draw */
+.all-buildings-2 circle,
+.all-buildings-2 polyline,
+.all-buildings-2 path,
+.all-buildings-2 rect {
+  opacity: 1;
+  stroke: rgba(255,255,255,1);
+  fill: none;
+}
+
+.all-buildings-2 .svg-building circle,
+.all-buildings-2 .svg-building polyline,
+.all-buildings-2 .svg-building path,
+.all-buildings-2 .svg-building rect {
+  opacity: 1;
+  stroke: rgba(255,255,255,1);
+  fill: none;
+}
+
+
+.all-buildings-2 line {
+  stroke: #FFF;
+  opacity: 1;
+
+}
+
+.all-buildings-2 .lights,
+.all-buildings-2 .tower-lines {
+  opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**** ---------------**** ---------------**** ---------------****
+
+  BUILDING DONGS
+
+/**** ---------------**** ---------------**** ---------------****/
+
+.dong-links-container {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 202px;
+  background: rgba(255,255,255,0.3);
+  background: none;
+  text-align: left;
+  bottom: 246px;
+
+  position: relative;
+  bottom: auto;
+  top: -100px;
+}
+
+
+
+.dong-links-container {
+  width: 3100px;
+  height: 500px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(255,255,255,0.3);
+  background: none;
+  z-index: 200;
+}
+
+
+.all-buildings-2 .dong path,
+.all-buildings-1 line.dong {
+  stroke-width: 2.5;
+}
+
+.all-buildings-2 .dong path {
+  stroke: #D41633!important;
+}
+
+
+
+
+/* Dong buttons */
+.dong-link {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #D41633;
+    display: block;
+    margin: auto;
+    position: absolute;
+    bottom: 0px;
+    left: 140px;
+    opacity: 0;
+    font-size: 15px;
+    
+    z-index: -1;
+    cursor: pointer;
+
+    opacity: 0;
+    /*z-index: 1000;*/
+
+    transform: scale(1);
+    -webkit-transform: scale(1);
+
+    padding: 25px 0;
+}
+
+.dong-link::before {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 300px;
+    background: none;
+    position: absolute;
+    bottom: 141px;
+    left: -100px;
+}
+
+.dong-link p {
+
+}
+
+.dong-link.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.dong path {
+  /*stroke-dashoffset: 0!important;*/
+}
+
+
+
+
+
+
+
+
+
+/*** SCROLL NAVIGATION ***/
+.scroll-nav {
+  position: fixed;
+  bottom: 40px;
+  width: 100%;
+  display: block;
+  z-index: 3000;
+  list-style: none;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.scroll-nav.active {
+  opacity: 1;
+}
+
+.scroll-nav li {
+  display: inline-block;
+  height: 4px;
+  width: 20px;
+  margin: 0 5px;
+  background: #264863;
+  cursor: pointer;
+}
+
+.scroll-nav li:hover,
+.scroll-nav li.current-scroll {
+  background: #FFF;
+}
+
+
+
+
+
+
+
+#controls {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  display: none;
+}
+
+#controls .ui-slider-horizontal {
+    height: 1px;
+}
+
+#controls .ui-slider .ui-slider-handle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #D41633;
+    border: none;
+    top: -.4em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

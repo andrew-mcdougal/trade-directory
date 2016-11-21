@@ -2,12 +2,20 @@ html,
 #trade {
 	font-family: arial;
 	font-size: 12px;
-	background: #FFF;
+	background: #ccc;
+
+	.wrap {
+		background: #FFF;
+	}
 
 	.header {
 		text-align: center;
-		background: #FFF;
+		background: #ccc;
 		color: blue;
+
+		.wrap {
+			padding: 20px;
+		}
 
 		#logo a {
 			color: blue;
@@ -45,12 +53,12 @@ html,
 /* top carousel thing */
 .main-carousel {
 	margin: 0 0 3em 0;
-	border: 1px solid #ccc;
+	border: 1px solid #000;
 
 	.business-pod {
 		width: 100%;
 		height: auto;
-		border: 1px solid #ccc;
+		border: 1px solid #000;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -107,14 +115,6 @@ html,
 			margin: 0;
 			position: relative;
 
-			&:after {
-				content: "\f0dd";
-				font-family: FontAwesome;
-				position: absolute;
-				top: 10px;
-				right: 20px;
-				color: #000;
-			}
 		}
 
 		input,
@@ -148,19 +148,13 @@ html,
 	
 }
 
-.caret {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 2px;
-    vertical-align: middle;
-    border-top: 4px solid #000;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
-    border-bottom: 0 dotted;
-    content: "";
-}
+/* content area */
+html #trade {
 
+	.standard-content p {
+		font-size: 16px;
+	}
+}
 
 
 
@@ -222,8 +216,22 @@ html #trade {
 
 
 #trade .footer {
-	background: #FFF;
-	color: blue;
+	background: #000;
+	color: white;
+	padding-top: 20px;
+
+	.footer-links {
+		float: right;
+
+		.nav li a {
+			padding: 0;
+			color: white;
+		}
+	}
+
+	.wrap {
+		background: #000;
+	}
 
 }
 
